@@ -3,7 +3,7 @@ require "fileutils"
 module Dotfiles
   module Packages
     class Dotfiles < Base
-      PATH = File.expand_path("~/src/github.com/r7kamura/dotfiles")
+      PATH = File.expand_path("~/src/github.com/rejasupotaro/dotfiles")
 
       SYMLINK_TABLE = {
         "~/.atom" => "linked/.atom/",
@@ -40,7 +40,7 @@ module Dotfiles
       end
 
       def install
-        system("git clone https://github.com/r7kamura/dotfiles.git #{PATH}")
+        system("git clone https://github.com/rejasupotaro/dotfiles.git #{PATH}")
       end
 
       def uninstall

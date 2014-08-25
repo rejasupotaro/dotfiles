@@ -298,7 +298,7 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 0</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/src/github.com/r7kamura/dotfiles</string>
+	<string>~/src/github.com/rejasupotaro/dotfiles</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -1048,7 +1048,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/r7kamura</string>
+			<string>/Users/rejasupotaro</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -1766,7 +1766,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/r7kamura</string>
+			<string>/Users/rejasupotaro</string>
 		</dict>
 	</array>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
@@ -1821,7 +1821,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/r7kamura/src/github.com/r7kamura/dotfiles/iterm2</string>
+	<string>/Users/rejasupotaro/src/github.com/rejasupotaro/dotfiles/iterm2</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>

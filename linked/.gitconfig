@@ -1,12 +1,12 @@
 [user]
-  name = Ryo Nakamura
-  email = r7kamura@gmail.com
+  name = Kentaro Takiguchi
+  email = takiguchi0817@gmail.com
 
 [include]
   path = .gitconfig.local
 
 [github]
-  user = r7kamura
+  user = rejasupotaro
 
 [color]
   diff        = auto
@@ -28,16 +28,17 @@
   autocrlf     = input
   quotepath    = false
   excludesfile = ~/.gitexcludes
-  editor = atom --wait
+  editor       = /usr/bin/vim
 
 [branch]
   quotepath       = true
   autosetuprebase = always
 
 [alias]
-  br = branch
-  co = checkout
+  br  = branch
+  co  = checkout
   dbr = !git branch --merged | grep -v \"\\* \" | xargs git branch --delete
+  st  = status
 [remote "origin"]
   fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
 [ghq]

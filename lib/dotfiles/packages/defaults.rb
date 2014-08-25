@@ -3,7 +3,7 @@ module Dotfiles
     class Defaults < Base
       def update
         system(<<-EOS)
-          cd ~/src/github.com/r7kamura/dotfiles
+          cd ~/src/github.com/rejasupotaro/dotfiles
           git pull
           bash defaults/update.sh
         EOS
