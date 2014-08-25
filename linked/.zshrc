@@ -106,3 +106,8 @@ export ATOM_PATH=/opt/homebrew-cask/Caskroom/atom/latest
 
 ## local
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+## local settings
+if [ -e ~/.local_settings ]; then
+  source ~/.local_settings
+fi

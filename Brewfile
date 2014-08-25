@@ -1,6 +1,9 @@
 update
 upgrade
 
+install android-sdk
+install android-ndk
+install autossh
 install go
 install hub
 install mysql
@@ -31,8 +34,6 @@ cask install iterm2
 cask install karabiner
 cask install kobito
 cask install licecap
-cask install macvim
-cask install totalfinder
 cask install yorufukurou
 
 tap peco/peco
