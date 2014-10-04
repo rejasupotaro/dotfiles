@@ -1,5 +1,5 @@
 # prompt {{{
-export PS1='( *´ω｀*) \w$(__git_ps1) $ '
+export PS1='\w$(__git_ps1) $ '
 # }}}
 
 # general keybind {{{
