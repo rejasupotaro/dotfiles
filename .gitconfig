@@ -1,0 +1,45 @@
+[user]
+  name = Kentaro Takiguchi
+  email = kentaro-takiguchi@cookpad.com
+
+[include]
+  path = .gitconfig.local
+
+[github]
+  user = rejasupotaro
+
+[color]
+  diff        = auto
+  grep        = auto
+  branch      = auto
+  status      = auto
+  interactive = auto
+
+[merge]
+  ff = false # from 1.7.6
+
+[pull]
+  rebase = true # from 1.7.9
+
+[push]
+  default = current
+
+[core]
+  autocrlf     = input
+  quotepath    = false
+  excludesfile = ~/.gitexcludes
+  editor       = /usr/bin/vim
+
+[branch]
+  quotepath       = true
+  autosetuprebase = always
+
+[alias]
+  br  = branch
+  co  = checkout
+  dbr = !git branch --merged | grep -v \"\\* \" | xargs git branch --delete
+  st  = status
+[remote "origin"]
+  fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
+[ghq]
+  root = ~/src
