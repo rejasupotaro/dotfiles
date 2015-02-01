@@ -4,9 +4,10 @@ filetype on
 filetype indent on
 filetype plugin on
 
+set title
 set nocompatible                 " use Vim default instead of 100% vi compativility
 set backspace=indent,eol,start   " more powerful backspacing
-set nobackup                     " don't keep a backup file
+set clipboard+=unnamed
 set history=100                  " keep 100 lines of command line history
 set viminfo='100,<100,s10        " reffer: http://vimwiki.net/?'viminfo'
 set ruler                        " show the cursor position all the time
@@ -28,6 +29,7 @@ set visualbell t_vb=             " kill beep flash
 set t_vb=                        " kill beep sound
 set formatoptions=q              " disable auto-insert line feeds
 set noswapfile                   " do not create .*.swp
+set ignorecase
 set smartcase                    " do not ignorecase if keyword contains uppercase
 set wrapscan
 set incsearch                    " use 'incremental search'
@@ -78,7 +80,6 @@ let &statusline =
       \. '%{",".(&fenc!=""?&fenc:&enc).",".&ff.","}'
       \. '[%{GetB()}]'
       \. '(%3l,%3c)'
-      \. '%{fugitive#statusline()}'
 
 function! GetB()
   let c = matchstr(getline('.'), '.', col('.') - 1)
@@ -122,13 +123,6 @@ set laststatus=2                 " always show statusline
 " general keymap {{{
 map Y y$
 
-imap {} {}<Left>
-imap [] []<Left>
-imap () ()<Left>
-imap <> <><Left>
-imap "" ""<Left>
-imap '' ''<Left>
-
 nmap <space>p :set paste<CR>I<CR>
 "nmap <C-w>r :source $HOME/.vimrc<CR>
 nmap <space>n :call <SID>toggle_show_number()<CR>
@@ -164,6 +158,8 @@ if has('vim_starting')
   set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim/
   call neobundle#begin(expand('~/.vim/bundle/'))
+  NeoBundleFetch 'Shougo/neobundle.vim'
+  call neobundle#end()
 endif
 
 NeoBundle 'Shougo/neobundle.vim'
@@ -177,7 +173,6 @@ NeoBundle 'Shougo/vimproc', {
 \ }
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'terryma/vim-multiple-cursors'
@@ -185,7 +180,6 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-rails'
 "NeoBundle 'thinca/vim-ref'
