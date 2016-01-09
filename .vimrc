@@ -151,16 +151,18 @@ endfunction
 " }}}
 
 " neobundle plugins {{{
-set nocompatible
-filetype plugin indent off
+if 0 | endif
 
 if has('vim_starting')
-  set nocompatible
+  if &compatible
+    set nocompatible
+  endif
+
   set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#begin(expand('~/.vim/bundle/'))
-  NeoBundleFetch 'Shougo/neobundle.vim'
-  call neobundle#end()
 endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc', {
@@ -181,11 +183,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tpope/vim-rails'
-"NeoBundle 'thinca/vim-ref'
-" tcomment
-" errormarker
-" matchit
+
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
@@ -205,7 +203,7 @@ nmap <C-w>f :VimFiler -buffer-name=explorer -split -winwidth=48 -toggle -no-quit
 "nmap <C-w>f :VimFiler<Cr>
 
 autocmd! FileType vimfiler call g:setup_vimfiler()
-function! g:setup_vimfiler()
+function! s:setup_vimfiler()
   nnoremap <buffer>s :call vimfiler#mappings#do_action('open_split')<Cr>
   nnoremap <buffer>v :call vimfiler#mappings#do_action('open_vsplit')<Cr>
 endfunction
