@@ -181,7 +181,6 @@ NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'Lokaltog/vim-powerline'
-NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'fatih/vim-go'
 
@@ -226,13 +225,6 @@ call unite#custom_action('file', 'open_vsplit', s:vimfiler_open)
 let g:vimfiler_default_columns = "type:size"
 " }}}
 
-" vimshell {{{
-noremap <C-w>s :VimShell<CR>
-"noremap <C-w>vp :VimShellPop<CR>
-let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
-let g:vimshell_prompt = "(*ﾂｴﾏ会ｽ*) " . " $ "
-" }}}
-
 " neocomplcache {{{
 let g:neocomplcache_enable_at_startup = 1             " use neocomplcache
 let g:neocomplcache_enable_smart_case = 1             " use smartcase
@@ -274,20 +266,6 @@ let g:quickrun_config = {
 " endwise {{{
 let g:endwise_no_mappings = 1
 autocmd FileType lua,ruby,sh,zsh,vim imap <buffer> <CR> <CR><Plug>DiscretionaryEnd
-" }}}
-
-" indent-guides {{{
-"let g:indent_guides_auto_colors = 0
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#121212 ctermbg=233
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#262626 ctermbg=235
-"let g:indent_guides_enable_on_vim_startup=1
-" }}}
-
-" vim-colors-solarized {{{
-"syntax enable
-"set background=light
-"let g:solarized_termcolors=256
-"colorscheme solarized
 " }}}
 
 " Type tab key to insert <TAB> or complement a word depending on the cursor position {{{
