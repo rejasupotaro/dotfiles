@@ -183,6 +183,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tpope/vim-endwise'
+NeoBundle 'fatih/vim-go'
 
 call neobundle#end()
 filetype plugin indent on
